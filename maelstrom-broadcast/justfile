@@ -1,0 +1,12 @@
+build:
+    go build
+
+test_a:
+    maelstrom test -w broadcast --bin ./maelstrom-broadcast --node-count 1 --time-limit 20 --rate 10
+
+test_b:
+    maelstrom test -w broadcast --bin ./maelstrom-broadcast --node-count 5 --time-limit 20 --rate 10
+
+test_c:
+    maelstrom test -w broadcast --bin ./maelstrom-broadcast --node-count 5 --time-limit 20 --rate 10 --nemesis partition
+
